@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import store from '../../store/store';
 import '../../styles/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../vendor/highlight/styles/default.css';
 
 export default class App extends PureComponent {
     render() {

@@ -40,7 +40,7 @@ const defaultState = {
 export default (state = defaultState, action) => {
     switch (action.type) {
         case actions.VALIDATE_SERVER_SUCCESS:
-            return {...state, connected: action.server};
+            return { ...state, connected: action.server };
         default:
             return state;
     }
