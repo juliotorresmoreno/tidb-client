@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react';
 import { Row, Col, Input, Button } from 'reactstrap';
 import Table from '../../components/Table';
-import { connect } from 'react-redux'
+import HighLight from '../../components/HighLight';
+import { connect } from 'react-redux';
+
 
 const mapStateToProps = (state) => ({
 
@@ -31,9 +33,6 @@ class Databases extends PureComponent {
     handleChange = ({ target: { name, value } }) => {
         this.setState({ [name]: value });
     }
-    doHighlight = (input) => {
-        return /\w+/g;
-    }
     render() {
         const { sql, data } = this.state;
         return (
@@ -45,11 +44,13 @@ class Databases extends PureComponent {
                 </Col>
                 <Col sm={12} xs={12} md={10}>
                     <div className="pt-3 pl-3 pb-3 pr-3">
-                        <Input
+                        {/*<Input
                             name="sql" type="textarea"
                             className="mb-3"
                             onChange={this.handleChange}
-                        value={sql} rows={5} />
+                        value={sql} rows={5} />*/}
+                        <HighLight />
+                        <br />
                         <Button color="primary">Enviar</Button>
                     </div>
                     <div className="pt-3 pl-3 pb-3 pr-3">

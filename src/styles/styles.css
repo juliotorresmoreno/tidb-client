@@ -4,3 +4,13 @@ body {
     background: white;
     color: black
 }
+
+
+.DraftEditor-root {
+    border: 1px #ccc solid;
+    min-height: 100px
+}
+
+.public-DraftStyleDefault-block {
+    line-height: initial;
+}
